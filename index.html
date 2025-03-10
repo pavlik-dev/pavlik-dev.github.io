@@ -7,23 +7,23 @@
   <title>pavlik_tt's website!</title>
   <style>
     body {
-      width: 100%;
-      background-color: #dafdb6;
+      background-color: teal;
     }
 
     #content {
-      width: 600px;
-      max-width: 600px;
+      max-width: 550px;
       width: 100%;
       margin: auto;
       text-align: center;
     }
 
     .section .header {
-      background-color: #55ffff;
+      background-color: #000080;
+      background: linear-gradient(90deg, #000080, #1084d0);
+      color: white;
       margin: 0;
       padding: 5px 7px;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #000080;
     }
 
     .section {
@@ -43,10 +43,10 @@
     <div class="section" id="header">
       <div class="content">
         <center>
-          <h2>
-            <img src="res/icon.gif" width="32" alt="pavlik_tt">
+          <h1>
+            <img src="res/icon.gif" width="64" alt="pavlik_tt">
             <br>pavlik_tt
-          </h2>
+          </h1>
         </center>
         <p>Welcome! I'm Pavel <i>(also known as: pavlik_tt, pavlik._roblox, zigzag14, etc.)</i>.
           <br>I'm the guy who comes up with the craziest ideas.
@@ -56,27 +56,35 @@
     <br>
 
     <div id="active-projects" class="section">
-      <h2 class="header" style="background-color: darkolivegreen; color:white;">Actively working on</h2>
+      <h3 class="header">Actively working on</h3>
       <div class="content">
         <dl>
           <dt>finfo</dt>
           <dd>A simple utility that shows information about files and folders, simple as that.<br><a
               href="https://github.com/pavlik-dev/finfo">GitHub</a></dd>
+          <dt>minCPU-16</dt>
+          <dd>A virtual <del style="color:gray">8-bit</del> 16-bit CPU! Runs on C++ and has its own
+            debugger.<br><a href="#mincpu">To minCPU section</a></dd>
         </dl>
       </div>
     </div>
     <br>
 
-    <div id="crazy-stuff" class="section">
-      <h2 class="header">Crazy stuff</h2>
+    <div id="mincpu" class="section">
+      <a name="mincpu"></a>
+      <h3 class="header">minCPU</h3>
       <div class="content">
         <dl>
-          <dt>minCPU</dt>
-          <dd>A virtual <del style="color:gray">8-bit</del> 16-bit CPU! Runs on C++ and has its own
-            debugger.<br>Still in
-            progress
-            so I
-            won't share the sources yet.</dd>
+          <dt>minCPU-16</dt>
+          <dd>16-bit version of minCPU.<br><a href="https://gitlab.com/pavlik-dev/mincpu">GitHub</a></dd>
+          <dt>minASM-16</dt>
+          <dd>16-bit version of minASM.<br><a href="javascript:void()" style="color:gray">coming soon...</a></dd>
+        </dl>
+        <dl>
+          <dt>minCPU-8</dt>
+          <dd>Original, 8-bit CPU.<br><a href="javascript:void()" style="color:gray">not public yet</a></dd>
+          <dt>minASM-8</dt>
+          <dd>Assembler for minCPU-8.<br><a href="javascript:void()" style="color:gray">not public yet</a></dd>
         </dl>
         <i>more stuff coming soon...</i>
       </div>
@@ -84,7 +92,7 @@
     <br>
 
     <div id="gpts" class="section">
-      <h2 class="header" style="color:white;background-color: #ff00be;">GPTs</h2>
+      <h3 class="header">GPTs</h3>
       <div class="content">
         <p>
           I was obsessed with ChatGPT back in 2023, and I did a bunch of clients for it...
@@ -104,14 +112,28 @@
           </dd>
           <dt>Kiwi</dt>
           <dd>Simple ChatGPT client for Python with GUI on Tkinter<br><a
-              href="https://github.com/pavlik-tt/https://github.com/pavlik-tt/kiwi-chatgpt-client">GitHub</a>
+              href="https://github.com/pavlik-tt/kiwi-chatgpt-client">GitHub</a>
           </dd>
         </dl>
       </div>
     </div>
     <br>
+    <div id="projects" class="section">
+      <h3 class="header">Other projects</h3>
+      <div class="content">
+        <p>
+          Take a look at my other projects:
+        </p>
+        <ul style="list-style-type:none">
+          <li><a href="https://codeberg.org/pavliktt/google2011/">Google2011</a> &mdash; Google search replica from 2011
+            powered by DuckDuckGo.</li>
+          <li><a href="http://cydia.pavliktt.pp.ua/">My Cydia repo</a> &mdash; My cydia repo dedicated to OLD/LEGACY iOS/iPhone OS devices. (those ones with 32-bit processors)</li>
+        </ul>
+      </div>
+    </div>
+    <br>
     <div id="socials" class="section">
-      <h2 class="header" style="color:white;background-color: #bb0000;">Socials</h2>
+      <h3 class="header">Socials</h3>
       <div class="content">
         <br>
         <ul>
@@ -126,7 +148,7 @@
     <br>
     <hr>
 
-    <footer>
+    <footer style="color: white;">
       <p>
         Site design heavily inspired by <a href="http://cebix.net">cebix.net</a>&nbsp;|&nbsp;<a
           href="http://pavliktt.free.nf">Old website</a>

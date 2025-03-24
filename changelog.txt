@@ -1,0 +1,16 @@
+pyt.pp.ua/pavliktt.pp.ua changelog
+http://pavliktt.pp.ua/changelog.txt
+
+24 Mar 2025
+	Website looks like OS X Tiger
+	Added minCPU folder
+
+10 Mar 2025
+	Website looks like Win9x
+
+03 Mar 2025
+	New website hosted on GitHub Pages
+	I could use Cloudflare Pages but they don't support HTTP so fuck them
+
+	Design is hugely inspired by cebix.net,
+	 although I made it look like Win9x

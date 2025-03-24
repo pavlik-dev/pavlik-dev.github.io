@@ -1,162 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>pavlik_tt's website!</title>
+        <link rel="stylesheet" href="res/macos.css" />
+        <base href="./" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pavlik_tt's website!</title>
-  <style>
-    body {
-      background-color: teal;
-    }
+    <body>
+        <div id="content">
+            <div class="section" id="header">
+                <p class="header">pavlik_tt's website!</p>
+                <div class="content">
+                    <p
+                        style="
+                            font-size: 2em;
+                            font-weight: bold;
+                            text-align: center;
+                        "
+                    >
+                        <img
+                            src="res/icon.gif"
+                            width="64"
+                            alt="pavlik_tt"
+                        /><br />
+                        pavlik_tt
+                    </p>
+                    <p>
+                        Welcome! I'm Pavel
+                        <i>(aka: pavlik_tt, pavlik._roblox, zigzag14, etc.)</i>.
+                        <br />Here you'll see my crazy projects and other stuff
+                    </p>
+                </div>
+            </div>
+            <br />
 
-    #content {
-      max-width: 550px;
-      width: 100%;
-      margin: auto;
-      text-align: center;
-    }
+            <div id="active-projects" class="section">
+                <p class="header">Actively working on</p>
+                <div class="content">
+                    <dl>
+                        <dt>finfo</dt>
+                        <dd>
+                            A simple utility that shows information about files
+                            and folders, simple as that.<br /><a
+                                href="https://github.com/pavlik-dev/finfo"
+                                >GitHub</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </dd>
+                        <dt>minCPU</dt>
+                        <dd>
+                            A virtual 8/16/32-bit CPU! Runs on C++ and has its
+                            own debugger.<br /><a href="mincpu/">minCPU</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <br />
 
-    .section .header {
-      background-color: #000080;
-      background: linear-gradient(90deg, #000080, #1084d0);
-      color: white;
-      margin: 0;
-      padding: 5px 7px;
-      border-bottom: 1px solid #000080;
-    }
+            <div id="gpts" class="section">
+                <p class="header">GPTs</p>
+                <div class="content">
+                    <p>
+                        I was obsessed with ChatGPT back in 2023, and I did a
+                        bunch of clients for it...
+                    </p>
+                    <dl>
+                        <dt>TelegramGPT</dt>
+                        <dd>
+                            Telegram bot with ChatGPT.<br />
+                            I remade it recently to use Gemini and the new
+                            version is available here:
+                            <a href="https://t.me/googlegemini_ai_bot"
+                                >@googlegemini_ai_bot</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </dd>
+                        <dt>SerialGPT</dt>
+                        <dd>
+                            Simple ChatGPT client for COM, running on Python<br />Source
+                            is lost sadly.
+                        </dd>
+                        <dt>LegacyGPT</dt>
+                        <dd>
+                            Simple ChatGPT client for HTTP, runs GPT 3 and not
+                            GPT 3.5 because of timeouts.<br />Was available for
+                            a year after it stopped working but now its gone.
+                        </dd>
+                        <dt>Kiwi</dt>
+                        <dd>
+                            Simple ChatGPT client for Python with GUI on
+                            Tkinter<br /><a
+                                href="https://github.com/pavlik-tt/kiwi-chatgpt-client"
+                                >GitHub</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <br />
+            <div id="projects" class="section">
+                <p class="header">Other projects</p>
+                <div class="content">
+                    <p>Take a look at my other projects:</p>
+                    <ul style="list-style-type: none">
+                        <li>
+                            <a href="https://codeberg.org/pavliktt/google2011/"
+                                >Google2011</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                            &mdash; Google search replica from 2011 powered by
+                            DuckDuckGo.
+                        </li>
+                        <li>
+                            <a href="http://cydia.pavliktt.pp.ua/"
+                                >My Cydia repo</a
+                            >
+                            &mdash; My cydia repo dedicated to OLD/LEGACY
+                            iOS/iPhone OS devices. (those ones with 32-bit
+                            processors)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+            <div id="socials" class="section">
+                <p class="header">Socials</p>
+                <div class="content">
+                    <br />
+                    <ul>
+                        <li>
+                            <a href="https://github.com/pavlik-dev/">GitHub</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="https://ovk.to/pavl">OpenVK</a>&nbsp;<a
+                                href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="https://social.vivaldi.net/@pavliktt"
+                                >Mastodon: @pavliktt (social.vivaldi.net)</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/pavlik_tt"
+                                >Telegram Channel: @pavlik_tt</a
+                            >&nbsp;<a href="#lock"
+                                ><img
+                                    class="text-icon"
+                                    src="res/lock.gif"
+                                    alt="HTTPS ahead!"
+                                    width="16"
+                            /></a>
+                        </li>
+                    </ul>
+                    <br />
+                </div>
+            </div>
+            <br />
+            <hr />
 
-    .section {
-      background-color: white;
-      border: 2px solid black;
-      text-align: left;
-    }
-
-    .section .content {
-      padding: 5px 7px;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="content">
-    <div class="section" id="header">
-      <div class="content">
-        <center>
-          <h1>
-            <img src="res/icon.gif" width="64" alt="pavlik_tt">
-            <br>pavlik_tt
-          </h1>
-        </center>
-        <p>Welcome! I'm Pavel <i>(also known as: pavlik_tt, pavlik._roblox, zigzag14, etc.)</i>.
-          <br>I'm the guy who comes up with the craziest ideas.
-        </p>
-      </div>
-    </div>
-    <br>
-
-    <div id="active-projects" class="section">
-      <h3 class="header">Actively working on</h3>
-      <div class="content">
-        <dl>
-          <dt>finfo</dt>
-          <dd>A simple utility that shows information about files and folders, simple as that.<br><a
-              href="https://github.com/pavlik-dev/finfo">GitHub</a></dd>
-          <dt>minCPU-16</dt>
-          <dd>A virtual <del style="color:gray">8-bit</del> 16-bit CPU! Runs on C++ and has its own
-            debugger.<br><a href="#mincpu">To minCPU section</a></dd>
-        </dl>
-      </div>
-    </div>
-    <br>
-
-    <div id="mincpu" class="section">
-      <a name="mincpu"></a>
-      <h3 class="header">minCPU</h3>
-      <div class="content">
-        <dl>
-          <dt>minCPU-16</dt>
-          <dd>16-bit version of minCPU.<br><a href="https://gitlab.com/pavlik-dev/mincpu">GitHub</a></dd>
-          <dt>minASM-16</dt>
-          <dd>16-bit version of minASM.<br><a href="javascript:void()" style="color:gray">coming soon...</a></dd>
-        </dl>
-        <dl>
-          <dt>minCPU-8</dt>
-          <dd>Original, 8-bit CPU.<br><a href="javascript:void()" style="color:gray">not public yet</a></dd>
-          <dt>minASM-8</dt>
-          <dd>Assembler for minCPU-8.<br><a href="javascript:void()" style="color:gray">not public yet</a></dd>
-        </dl>
-        <i>more stuff coming soon...</i>
-      </div>
-    </div>
-    <br>
-
-    <div id="gpts" class="section">
-      <h3 class="header">GPTs</h3>
-      <div class="content">
-        <p>
-          I was obsessed with ChatGPT back in 2023, and I did a bunch of clients for it...
-        </p>
-        <dl>
-          <dt>TelegramGPT</dt>
-          <dd>Telegram bot with ChatGPT.<br>
-            I remade it recently to use Gemini and the new version is available here: <a
-              href="https://t.me/googlegemini_ai_bot">@googlegemini_ai_bot</a>
-          </dd>
-          <dt>SerialGPT</dt>
-          <dd>Simple ChatGPT client for COM, running on Python<br>Source is lost sadly.
-          </dd>
-          <dt>LegacyGPT</dt>
-          <dd>Simple ChatGPT client for HTTP, runs GPT 3 and not GPT 3.5 because of timeouts.<br>Was available
-            for a year after it stopped working but now its gone.
-          </dd>
-          <dt>Kiwi</dt>
-          <dd>Simple ChatGPT client for Python with GUI on Tkinter<br><a
-              href="https://github.com/pavlik-tt/kiwi-chatgpt-client">GitHub</a>
-          </dd>
-        </dl>
-      </div>
-    </div>
-    <br>
-    <div id="projects" class="section">
-      <h3 class="header">Other projects</h3>
-      <div class="content">
-        <p>
-          Take a look at my other projects:
-        </p>
-        <ul style="list-style-type:none">
-          <li><a href="https://codeberg.org/pavliktt/google2011/">Google2011</a> &mdash; Google search replica from 2011
-            powered by DuckDuckGo.</li>
-          <li><a href="http://cydia.pavliktt.pp.ua/">My Cydia repo</a> &mdash; My cydia repo dedicated to OLD/LEGACY iOS/iPhone OS devices. (those ones with 32-bit processors)</li>
-        </ul>
-      </div>
-    </div>
-    <br>
-    <div id="socials" class="section">
-      <h3 class="header">Socials</h3>
-      <div class="content">
-        <br>
-        <ul>
-          <li><a href="https://github.com/pavlik-dev/">GitHub</a></li>
-          <li><a href="https://ovk.to/pavl">OpenVK</a></li>
-          <li><a href="https://social.vivaldi.net/@pavliktt">Mastodon: @pavliktt</a></li>
-          <li><a href="https://t.me/pavlik_tt">Telegram Channel: @pavlik_tt</a></li>
-        </ul>
-        <br>
-      </div>
-    </div>
-    <br>
-    <hr>
-
-    <footer style="color: white;">
-      <p>
-        Site design heavily inspired by <a href="http://cebix.net">cebix.net</a>&nbsp;|&nbsp;<a
-          href="http://pavliktt.free.nf">Old website</a>
-      </p>
-    </footer>
-  </div>
-
-
-</body>
-
+            <footer style="color: white">
+                <p>
+                    <a name="lock"></a>
+                    Note: Links that lead to HTTPS sites are marked with a lock
+                    icon (<img
+                        class="text-icon"
+                        src="res/lock.gif"
+                        alt="HTTPS ahead!"
+                        width="16"
+                    />)
+                </p>
+                <p>
+                    Site design inspired by
+                    <a style="color: white" href="http://cebix.net"
+                        >cebix.net</a
+                    >
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>

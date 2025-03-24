@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>minCPU Instruction Table</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+                font-family: monospace;
+            }
+
+            th,
+            td {
+                border: 1px solid black;
+                padding: 5px;
+            }
+
+            body {
+                padding: 5px 0%;
+                margin: auto;
+                width: 600px;
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th></th>
+                <th>x0</th>
+                <th>x1</th>
+                <th>x2</th>
+                <th>x3</th>
+                <th>x4</th>
+                <th>x5</th>
+                <th>x6</th>
+                <th>x7</th>
+                <th>x8</th>
+                <th>x9</th>
+                <th>xA</th>
+                <th>xB</th>
+                <th>xC</th>
+                <th>xD</th>
+                <th>xE</th>
+                <th>xF</th>
+            </tr>
+            <tr>
+                <th>0x</th>
+                <td><a href="#load">LOAD M</a></td>
+                <td><a href="#store">STORE M</a></td>
+                <td><a href="#mov">MOV M1, M2</a></td>
+                <td><a href="#swap">SWAP M1, M2</a></td>
+                <td><a href="#ptr">PTR M1, M2</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>1x</th>
+                <td><a href="#push">PUSH X</a></td>
+                <td><a href="#pop">POP</a></td>
+                <td><a href="#sdepth">SDEPTH</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2x</th>
+                <td><a href="#func">FUNC</a></td>
+                <td><a href="#return">RETURN</a></td>
+                <td><a href="#call">CALL M</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3x</th>
+                <td><a href="#in">IN x1, x2</a></td>
+                <td><a href="#out">OUT x, M</a></td>
+                <td><a href="#isconn">ISCONN x</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4x</th>
+                <td><a href="#add">ADD M1, M2/x</a></td>
+                <td><a href="#sub">SUB M1, M2/x</a></td>
+                <td><a href="#mul">MUL M1, M2/x</a></td>
+                <td><a href="#div">DIV M1, M2/x</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>5x</th>
+                <td><a href="#shl">SHL M1, M2/x</a></td>
+                <td><a href="#shr">SHR M1, M2/x</a></td>
+                <td><a href="#neg">NEG M/x</a></td>
+                <td><a href="#and">AND M1, M2/x</a></td>
+                <td><a href="#or">OR M1, M2/x</a></td>
+                <td><a href="#xor">XOR M1, M2/x</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h3 id="load">LOAD M</h3>
+        <p>Load M to ACC</p>
+        <h3 id="store">STORE M</h3>
+        <p>Write to memory</p>
+        <h3 id="mov">MOV M1, M2</h3>
+        <p>Copy M1 to M2</p>
+        <h3 id="swap">SWAP M1, M2</h3>
+        <p>Swap M1 with M2</p>
+        <h3 id="ptr">PTR M1, M2</h3>
+        <p>Point M1 to M2</p>
+        <h3 id="push">PUSH X</h3>
+        <p>Push X onto stack</p>
+        <h3 id="pop">POP</h3>
+        <p>Pop from stack</p>
+        <h3 id="sdepth">SDEPTH</h3>
+        <p>Get stack depth</p>
+        <h3 id="func">FUNC</h3>
+        <p>Function flag</p>
+        <h3 id="return">RETURN</h3>
+        <p>Return to caller</p>
+        <h3 id="call">CALL M</h3>
+        <p>Push PC+1 and jump</p>
+        <h3 id="in">IN x1, x2</h3>
+        <p>Send x2 to device #x1</p>
+        <h3 id="out">OUT x, M</h3>
+        <p>Receive from device and write to M</p>
+        <h3 id="isconn">ISCONN x</h3>
+        <p>Check if device is connected</p>
+        <h3 id="add">ADD M1, M2/x</h3>
+        <p>Add M2/x to M1</p>
+        <h3 id="sub">SUB M1, M2/x</h3>
+        <p>Subtract M2/x from M1</p>
+        <h3 id="mul">MUL M1, M2/x</h3>
+        <p>Multiply M1 by M2/x</p>
+        <h3 id="div">DIV M1, M2/x</h3>
+        <p>Divide M1 by M2/x</p>
+        <h3 id="shl">SHL M1, M2/x</h3>
+        <p>Bitshift M1 left</p>
+        <h3 id="shr">SHR M1, M2/x</h3>
+        <p>Bitshift M1 right</p>
+        <h3 id="neg">NEG M/x</h3>
+        <p>Bitwise NOT on M/x</p>
+        <h3 id="and">AND M1, M2/x</h3>
+        <p>Bitwise AND on M1 and M2/x</p>
+        <h3 id="or">OR M1, M2/x</h3>
+        <p>Bitwise OR on M1 and M2/x</p>
+        <h3 id="xor">XOR M1, M2/x</h3>
+        <p>Bitwise XOR on M1 and M2/x</p>
+    </body>
+</html>

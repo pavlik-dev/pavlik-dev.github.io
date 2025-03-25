@@ -1,6 +1,10 @@
 pyt.pp.ua/pavliktt.pp.ua changelog
 http://pavliktt.pp.ua/changelog.txt
 
+25 Mar 2025
+	Made Tiger look flexible by splitting header into parts
+	Hovering window buttons will show icons just like on OS X
+
 24 Mar 2025
 	Website looks like OS X Tiger
 	Added minCPU folder

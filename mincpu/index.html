@@ -3,61 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>pavlik_tt's website!</title>
-        <style>
-            @font-face {
-                font-family: "Lucida Grande UI";
-                src: url("../res/LucidaGrandeUI.ttf");
-            }
-
-            body {
-                /* background-color: teal; */
-                background-color: rgb(81, 129, 183);
-                font-family: "Lucida Grande UI";
-                margin-top: 12px;
-            }
-
-            #content {
-                width: 550px;
-                max-width: 550px;
-                margin: auto;
-                text-align: center;
-            }
-
-            .section .header {
-                /* Old Win9x look */
-                /* background-color: #000080;
-                background: linear-gradient(90deg, #000080, #1084d0);
-                border-bottom: 1px solid #000080; */
-                margin: 0;
-                background-image: url(../res/macos_header.gif);
-                font-size: 13px;
-                height: 22px;
-                text-align: center;
-                line-height: 22px;
-                color: black;
-            }
-
-            .section {
-                /* background-color: white; */
-                /* border: 2px solid black; */
-                text-align: left;
-                filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
-            }
-
-            .section .content {
-                /* padding: 5px 7px; */
-                padding: 10px;
-                background-color: white;
-                font-size: 13px;
-            }
-        </style>
+        <title>minCPU &mdash; pavlik_tt's website!</title>
+        <link rel="stylesheet" href="../res/macos.css" />
     </head>
 
     <body>
         <div id="content">
             <div class="section" id="header">
-                <p class="header">minCPU &mdash; pavlik_tt's Website!</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">
+                                minCPU &mdash; pavlik_tt's Website!
+                            </p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <p><a href="../">&lt;&lt; Back to main page</a></p>
                     <p
@@ -81,7 +44,15 @@
             <br />
 
             <div id="why" class="section">
-                <p class="header">Why?</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">Why?</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     Again, why not? I just wanted to make a CPU one day and I
                     did it.<br />
@@ -92,7 +63,15 @@
             <br />
 
             <div id="bitness" class="section">
-                <p class="header">Versions</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">Versions</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <ul>
                         <li style="font-style: italic; color: gray">32-bit?</li>
@@ -114,7 +93,15 @@
             <br />
 
             <div id="minasm" class="section">
-                <p class="header">minASM</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">minASM</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <p>Assembler dialect for minCPU (kinda obvious)</p>
                     <dl>
@@ -142,14 +129,16 @@
 
             <footer style="color: white">
                 <p>
-                    <a name="lock"></a>
-                    Note: Links that lead to HTTPS sites are marked with a lock
-                    icon (<img
-                        class="text-icon"
-                        src="../res/lock.gif"
-                        alt="HTTPS ahead!"
-                        width="16"
-                    />)
+                    <i>
+                        <a name="lock"></a>
+                        Links that lead to HTTPS sites are marked with a lock
+                        icon (<img
+                            class="text-icon"
+                            src="../res/lock.gif"
+                            alt="HTTPS ahead!"
+                            width="16"
+                        />)
+                    </i>
                 </p>
                 <p>
                     Site design inspired by

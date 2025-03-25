@@ -1,17 +1,24 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>pavlik_tt's website!</title>
         <link rel="stylesheet" href="res/macos.css" />
-        <base href="./" />
     </head>
 
     <body>
         <div id="content">
             <div class="section" id="header">
-                <p class="header">pavlik_tt's website!</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">pavlik_tt's website!</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <p
                         style="
@@ -37,7 +44,15 @@
             <br />
 
             <div id="active-projects" class="section">
-                <p class="header">Actively working on</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">Actively working on</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <dl>
                         <dt>finfo</dt>
@@ -56,7 +71,7 @@
                         </dd>
                         <dt>minCPU</dt>
                         <dd>
-                            A virtual 8/16/32-bit CPU! Runs on C++ and has its
+                            A virtual 8/16/32-bit CPU! Runs on Go and has its
                             own debugger.<br /><a href="mincpu/">minCPU</a>
                         </dd>
                     </dl>
@@ -65,7 +80,15 @@
             <br />
 
             <div id="gpts" class="section">
-                <p class="header">GPTs</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">GPTs</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <p>
                         I was obsessed with ChatGPT back in 2023, and I did a
@@ -117,7 +140,15 @@
             </div>
             <br />
             <div id="projects" class="section">
-                <p class="header">Other projects</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">Other projects</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <p>Take a look at my other projects:</p>
                     <ul style="list-style-type: none">
@@ -147,7 +178,15 @@
             </div>
             <br />
             <div id="socials" class="section">
-                <p class="header">Socials</p>
+                <table class="header">
+                    <tr>
+                        <td class="header-left"></td>
+                        <td class="header-center">
+                            <p class="header">Socials</p>
+                        </td>
+                        <td class="header-right"></td>
+                    </tr>
+                </table>
                 <div class="content">
                     <br />
                     <ul>
@@ -202,14 +241,16 @@
 
             <footer style="color: white">
                 <p>
-                    <a name="lock"></a>
-                    Note: Links that lead to HTTPS sites are marked with a lock
-                    icon (<img
-                        class="text-icon"
-                        src="res/lock.gif"
-                        alt="HTTPS ahead!"
-                        width="16"
-                    />)
+                    <i>
+                        <a name="lock"></a>
+                        Links that lead to HTTPS sites are marked with a lock
+                        icon (<img
+                            class="text-icon"
+                            src="res/lock.gif"
+                            alt="HTTPS ahead!"
+                            width="16"
+                        />)
+                    </i>
                 </p>
                 <p>
                     Site design inspired by

@@ -1,41 +1,76 @@
 @font-face {
     font-family: LucidaGrandeUI;
     src: url(LucidaGrandeUI.ttf);
+    font-display: swap;
 }
 
 body {
-    /* background-color: teal; */
     background-color: rgb(81, 129, 183);
     font-family: LucidaGrandeUI, sans-serif;
     margin-top: 12px;
 }
 
 #content {
-    width: 550px;
+    width: 100%;
     max-width: 550px;
     margin: auto;
     text-align: center;
 }
 
 .section .header {
-    /* Old Win9x look */
-    /* background-color: #000080;
-        background: linear-gradient(90deg, #000080, #1084d0);
-        border-bottom: 1px solid #000080; */
     margin: 0;
-    background-image: url(macos_header.gif);
-    font-size: 13px;
     height: 22px;
     text-align: center;
-    line-height: 22px;
     color: black;
 }
 
+.section table.header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.section table.header td {
+    padding: 0;
+    margin: 0;
+    height: 22px;
+}
+
+.section .header .header-left {
+    background-image: url(header-left.gif);
+    width: 64px;
+}
+
+.section .header .header-left:hover {
+    background-image: url(header-left-hover.gif);
+}
+
+.section .header .header-center {
+    background-image: url(header-center.gif);
+}
+
+.header-center p {
+    font-size: 13px;
+    line-height: 22px;
+    transform: translate(-28px, 0px);
+    -webkit-transform: translate(-28px, 0px);
+    -ms-transform: translate(-28px, 0px);
+    -moz-transform: translate(-28px, 0px);
+    -o-transform: translate(-28px, 0px);
+}
+
+.section .header .header-right {
+    background-image: url(header-right.gif);
+    width: 9px;
+    height: 22px;
+}
+
 .section {
-    /* background-color: white; */
-    /* border: 2px solid black; */
     text-align: left;
     filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
+    -webkit-filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
+    -ms-filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
 }
 
 .section .content {

@@ -33,6 +33,11 @@ body {
     height: 22px;
 }
 
+.section table.header td p {
+    padding: 0;
+    margin: 0;
+}
+
 .section .header .header-left {
     background-image: url(header-left.gif);
     width: 64px;
@@ -46,9 +51,10 @@ body {
     background-image: url(header-center.gif);
 }
 
-.header-center p {
+.header-center span {
     font-size: 13px;
     line-height: 22px;
+    display: inline-block;
     transform: translate(-28px, 0px);
     -webkit-transform: translate(-28px, 0px);
     -ms-transform: translate(-28px, 0px);

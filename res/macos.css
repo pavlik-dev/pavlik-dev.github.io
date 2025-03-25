@@ -17,18 +17,14 @@ body {
     text-align: center;
 }
 
-.section .header {
-    margin: 0;
-    height: 22px;
-    text-align: center;
-    color: black;
-}
-
 .section table.header {
     width: 100%;
     padding: 0;
     margin: 0;
     border-collapse: collapse;
+    height: 22px;
+    text-align: center;
+    color: black;
 }
 
 .section table.header td {

@@ -1,0 +1,134 @@
+@font-face {
+    font-family: LucidaGrandeUI;
+    src: url(/assets/fonts/LucidaGrandeUI.ttf) format("truetype");
+    font-display: swap;
+}
+
+body {
+    background-color: rgb(81, 129, 183);
+    font-family: LucidaGrandeUI, sans-serif;
+    margin-top: 12px;
+}
+
+#content {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+}
+
+nav table {
+    width: 50%;
+    margin: auto;
+}
+
+nav table td {
+    text-align: center;
+    width: 25%;
+}
+
+.section table.header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    height: 22px;
+    text-align: center;
+    color: black;
+}
+
+.section table.header td {
+    padding: 0;
+    margin: 0;
+    height: 22px;
+}
+
+.section table.header td p {
+    padding: 0;
+    margin: 0;
+}
+
+.section .header .header-left {
+    background-image: url(/assets/img/header-left.gif);
+    width: 64px;
+}
+
+.section .header .header-left:hover {
+	background-position: 64px 0px;
+}
+
+.section .header .header-center {
+    background-image: url(/assets/img/header-center.gif);
+}
+
+.header-center span {
+    font-size: 13px;
+    line-height: 22px;
+    display: inline-block;
+    transform: translate(-28px, 0px);
+    -webkit-transform: translate(-28px, 0px);
+    -ms-transform: translate(-28px, 0px);
+    -moz-transform: translate(-28px, 0px);
+    -o-transform: translate(-28px, 0px);
+}
+
+.section .header .header-right {
+    background-image: url(/assets/img/header-right.gif);
+    width: 9px;
+    height: 22px;
+}
+
+.section {
+    text-align: left;
+    filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
+    -webkit-filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
+    -ms-filter: drop-shadow(0px 6px 6.5px rgba(0, 0, 0, 0.42));
+}
+
+.section .content {
+    padding: 10px 13px;
+    background-color: white;
+    font-size: 13px;
+}
+
+.text-icon {
+    vertical-align: text-top;
+}
+
+.inline-h1 {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.inline-h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.inline-h3 {
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+
+.inline-h4 {
+    font-weight: bolder;
+}
+
+.inline-h5 {
+    font-size: .83em;
+    font-weight: bolder;
+}
+
+.inline-h6 {
+    font-size: .75em;
+    font-weight: bolder;
+}
+
+footer {
+    text-shadow: 0px 6px 6.5px rgba(0, 0, 0, .7);
+}
+
+hr {
+  border: none;             /* Remove default browser styling */
+  border-top: 2px solid white; /* Set your own thickness and color */
+}

@@ -1,0 +1,23 @@
+pavlik-dev.github.io changelog
+http://pavlik-dev.github.io/changelog.txt
+
+03 April 2026
+	Changed my old nickname to p2u11 or just Paul
+
+25 Mar 2025
+	Made Tiger look flexible by splitting header into parts
+	Hovering window buttons will show icons just like on OS X
+
+24 Mar 2025
+	Website looks like OS X Tiger
+	Added minCPU folder
+
+10 Mar 2025
+	Website looks like Win9x
+
+03 Mar 2025
+	New website hosted on GitHub Pages
+	I could use Cloudflare Pages but they don't support HTTP so fuck them
+
+	Design is hugely inspired by cebix.net,
+	 although I made it look like Win9x

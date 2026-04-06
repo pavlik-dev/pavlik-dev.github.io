@@ -1,0 +1,193 @@
+---
+layout: default
+title: Paul's photos
+permalink: /photos/
+---
+
+<div id="content">
+    <div class="section" id="header">
+        <table class="header" role="presentation">
+            <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                    <h1>Paul's photos</h1>
+                </td>
+                <td class="header-right"></td>
+            </tr>
+        </table>
+        <div class="content">
+            <p>
+                Here we have some of my photos.<br />
+                All of them are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+            </p>
+        </div>
+    </div>
+    <br />
+
+    <div id="active-projects" class="section">
+        <table class="header" role="presentation">
+            <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                    <h2>Actively working on</h2>
+                </td>
+                <td class="header-right"></td>
+            </tr>
+        </table>
+        <div class="content">
+            <div>
+                <p class="inline-h3">My home server</p>
+                <p>
+                    A lovely MacBook Pro Mid-2012 running Fedora Server with a bunch of services on it, including:
+                <ul>
+                    <li>Nextcloud</li>
+                    <li>Jellyfin</li>
+                    <li>Immich</li>
+                    <li>Vaultwarden</li>
+                </ul>
+                </p>
+                <p>
+                    <a href="https://p2u11.pp.ua">Home page</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div id="my-stuff" class="section">
+        <table class="header" role="presentation">
+            <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                    <h2>Peachy for Chrome/Firefox</h2>
+                </td>
+                <td class="header-right"></td>
+            </tr>
+        </table>
+        <div class="content">
+            <div>
+                <p class="inline-h3">Peachy theme</p>
+                <p>
+                    A pretty theme featuring peachy sky with clouds.<br />
+                    Available for both new and old versions of Chrome, and modern versions of Firefox. (not the old
+                    ones with XUL-based themes, sry i tried)
+                </p>
+                <p>
+                    To install on Chrome, first download the theme as a file by right-clicking the version you want
+                    and
+                    selecting "Save link as...".<br>
+                    Then go to <code>chrome://extensions</code>, enable Developer mode and drag and drop .crx file
+                    into the
+                    browser window.
+                </p>
+                <p>
+                    <a href="/assets/img/peachy-preview.png"><img src="/assets/img/peachy-preview-zoomed-in.png"
+                            alt="Peachy theme preview" style="width: 100%;" />
+                    </a>
+                </p>
+                <table style="width: 100%; text-align:center;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/assets/files/peachy-old.crx"><img src="/assets/img/old chromium logo.png"
+                                        width="16" alt="old chromium/chrome logo" /> before chrome 18</a>
+                            </td>
+                            <td>
+                                <a href="/assets/files/peachy.crx"><img src="/assets/img/new chromium logo.png"
+                                        width="16" alt="new chromium/chrome logo" />
+                                    modern (chrome 18+)</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width: 100%; text-align:center;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://addons.mozilla.org/en-US/firefox/addon/peachy-theme/"><img
+                                        src="/assets/img/firefox_logo.png" width="16" alt="firefox logo" />
+                                    Firefox</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <hr />
+
+    <footer style="color: white; font-size: smaller;">
+        <p>
+            <i>
+                <a name="lock"></a>
+                Links that lead to HTTPS sites are marked with a lock
+                icon (<img class="text-icon" src="/assets/img/lock.gif" alt="HTTPS ahead!" width="16" />)
+            </i>
+        </p>
+        <p>
+            &copy; 2026 ~ CC BY 4.0 (basically "Attribution required") unless otherwise stated.
+        </p>
+    </footer>
+</div>
+<div id="settings-popup">
+    <div class="popup-header">
+        <table class="header" role="presentation">
+            <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                    <h2>Preferences</h2>
+                </td>
+                <td class="header-right"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="popup-content">
+        <div class="popup-body">
+            <p><label for="scale-slider">Scale:</label>
+                <input type="range" name="scale" id="scale-slider" min="0.5" max="2" value="1" step="0.25"
+                    oninput="changeScale(this.value)">
+                <span id="scale-value">1</span>x
+            </p>
+            <p style="text-align: center;" id="settings-no-local-storage-warning">
+                <i>Your browser doesn't support local storage :[</i>
+            </p>
+        </div>
+    </div>
+</div>
+<div id="settings-button">
+    <button onclick="toggleSettingsPopup()"><img src="/assets/img/settings.gif" alt="Settings icon"></button>
+</div>
+<script>
+    if (typeof (Storage) !== "undefined") {
+        console.warn("Local storage is supported, yay! :D");
+        document.getElementById("settings-no-local-storage-warning").style.display = "none";
+        // check if there's a saved scale value in local storage and apply it
+        const savedScale = localStorage.getItem("pageScale");
+        if (savedScale) {
+            changeScale(savedScale);
+            document.getElementById("scale-slider").value = savedScale;
+        }
+    }
+
+    function changeScale(value) {
+        // change the scale of the page contents
+        document.getElementById("content").style.transform = `scale(${value})`;
+        document.getElementById("scale-value").textContent = value;
+
+        // save the value to local storage
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem("pageScale", value);
+        }
+    }
+
+    function toggleSettingsPopup() {
+        const popup = document.getElementById("settings-popup");
+        popup.classList.toggle("visible");
+    }
+
+    function closeSettingsPopup() {
+        document.getElementById("settings-popup").classList.remove("visible");
+    }
+</script>

@@ -1,0 +1,84 @@
+---
+layout: default
+title: IDv3dit
+permalink: /idv3dit/
+---
+
+<script src="https://unpkg.com/browser-id3-writer@4.4.0/dist/browser-id3-writer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+{% include section_start.html title='IDv3dit' %}
+<p style="
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+">
+    <img src="/assets/img/pfp.jpg" width="128" alt="pavlik_tt" /><br />
+    IDv3dit
+</p>
+<p>
+    IDv3dit is a simple web-based ID3 tag editor for MP3 files.<br />
+    Not only can it do title, album, artist, but also can automatically add lyrics (either unsynced or
+    both synced and unsynced from a LRC or SRT file), auto converts album art to JPG, and so much more!
+</p>
+{% include section_end.html %}
+
+{% include section_start.html title="Load an MP3 file to edit its tags" %}
+<p><input type="file" id="audio-input" accept=".mp3" /></p>
+<p style="text-align: center; font-size: 0.9em;
+            color: #666;">Processing is done locally in your browser.</p>
+{% include section_end.html %}
+
+<table class="multiple-windows" id="idv3dit-basic-metadata" role="presentation">
+    <tr>
+        <td>
+            <!-- album art -->
+            {% include section_start.html title="Front cover art" %}
+            <input type="file" id="cover-file-input" accept="image/*" style="display: none;" />
+            <img onclick="document.getElementById('cover-file-input').click()" class="idv3dit-front-cover-art" id="cover-preview" src="sample_front_cover.jpg"
+                alt="Front cover art" style="max-width: 250px;">
+            <p style="text-align: center; font-size: 0.9em; color: #666;">Click the image to change
+                the album art</p>
+            {% include section_end.html %}
+        </td>
+        <td>
+            <!-- basic metadata -->
+            {% include section_start.html title="Basic Metadata" %}
+            <p><strong>Title:</strong> <input type="text" name="title" id="title"></p>
+            <p><strong>Artist:</strong> <input type="text" name="artist" id="artist"></p>
+            <p><strong>Album:</strong> <input type="text" name="album" id="album"></p>
+            <p><strong>Date:</strong> <input type="date" name="date" id="date"></p>
+            <p style="text-align: center; font-size: 0.9em; color: #666;">Note: the exact day and month may
+                not be supported by all players.</p>
+            {% include section_end.html %}
+        </td>
+    </tr>
+</table>
+
+<!-- more metadata -->
+{% include section_start.html title="Other Metadata" %}
+<p><strong>Track number:</strong> <input type="number" name="track" id="track" min="1">/<input type="number"
+        name="total-tracks" id="total-tracks" min="1"></p>
+<p><strong>Disc number:</strong> <input type="number" name="disc" id="disc" min="1">/<input type="number"
+        name="total-discs" id="total-discs" min="1"></p>
+<p><strong>Composer:</strong> <input type="text" name="composer" id="composer"></p>
+<p><strong>Album artist:</strong> <input type="text" name="album-artist" id="album-artist"></p>
+{% include section_end.html %}
+
+{% comment %}
+<!-- lyrics -->
+{% include section_start.html title="Lyrics" %}
+<p><input type="file" id="lyrics-file-input" accept=".txt,.lrc,.srt" /></p>
+<p style="text-align: center; font-size: 0.9em; color: #666;">Supported formats: TXT (unsynced),
+    LRC (synced or unsynced), SRT (synced)<br />Tip: you can get LRC files from sites like lrclib.net!
+</p>
+{% include section_end.html %}
+{% endcomment %}
+
+<!-- export -->
+{% include section_start.html title="Export" %}
+<p style="text-align: center;">
+    <button id="export-button">Export</button>
+</p>
+{% include section_end.html %}
+
+<script src="script.js"></script>

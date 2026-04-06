@@ -4,17 +4,37 @@
     font-display: swap;
 }
 
+:root {
+    --page-width: 800px;
+}
+
 body {
     background-color: rgb(81, 129, 183);
     font-family: LucidaGrandeUI, sans-serif;
     margin-top: 12px;
 }
 
+body footer {
+    max-width: var(--page-width);
+    margin: auto;
+    color: white;
+    font-size: smaller;
+    text-align: center;
+}
+
+body hr {
+    width: 100%;
+    margin: auto;
+    max-width: var(--page-width);
+}
+
 #content {
     width: 100%;
-    max-width: 550px;
+    max-width: var(--page-width);
+    height: 100%;
     margin: auto;
     text-align: center;
+    transform-origin: top center;
 }
 
 nav table {
@@ -25,6 +45,21 @@ nav table {
 nav table td {
     text-align: center;
     width: 25%;
+}
+
+#content .section {
+    width: 550px;
+    margin: auto;
+}
+
+table.multiple-windows td {
+    vertical-align: top;
+    padding: 10px;
+}
+
+.idv3dit-front-cover-art {
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .section table.header {
@@ -49,19 +84,20 @@ nav table td {
 }
 
 .section .header .header-left {
-    background-image: url(/assets/img/header-left.gif);
+    background-image: url(/assets/img/macos/header-left.gif);
     width: 64px;
 }
 
 .section .header .header-left:hover {
-	background-position: 64px 0px;
+    background-position: 64px 0px;
 }
 
 .section .header .header-center {
-    background-image: url(/assets/img/header-center.gif);
+    background-image: url(/assets/img/macos/header-center.gif);
 }
 
-.header-center span {
+.header-center h1,
+.header-center h2 {
     font-size: 13px;
     line-height: 22px;
     display: inline-block;
@@ -70,10 +106,13 @@ nav table td {
     -ms-transform: translate(-28px, 0px);
     -moz-transform: translate(-28px, 0px);
     -o-transform: translate(-28px, 0px);
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
 }
 
 .section .header .header-right {
-    background-image: url(/assets/img/header-right.gif);
+    background-image: url(/assets/img/macos/header-right.gif);
     width: 9px;
     height: 22px;
 }
@@ -129,6 +168,74 @@ footer {
 }
 
 hr {
-  border: none;             /* Remove default browser styling */
-  border-top: 2px solid white; /* Set your own thickness and color */
+    border: none;
+    /* Remove default browser styling */
+    border-top: 2px solid white;
+    /* Set your own thickness and color */
+}
+
+/* settings button */
+
+#settings-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#settings-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#settings-button button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* settings popup */
+
+#settings-popup {
+    position: fixed;
+    bottom: calc(40px + 20px + 10px);
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+#settings-popup.visible {  /* if the popup is supposed to be visible, show it */
+    display: block;
+}
+
+#settings-popup .content {  
+    width: 280px;
+    overflow: hidden;
+}
+#settings-popup .popup-body {
+    padding: 16px;
+    font-size: 13px;
+}
+
+#settings-popup .popup-body p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#settings-popup .popup-body label {
+    white-space: nowrap;
+    min-width: 50px;
+}
+
+#settings-popup .popup-body input[type="range"] {
+    flex-grow: 1;
+}
+
+#idv3dit-basic-metadata {
+    margin: auto;
+}
+
+#idv3dit-basic-metadata td .section {
+    width: fit-content;
 }

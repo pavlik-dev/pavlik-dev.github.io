@@ -1,0 +1,7 @@
+# Jekyll and build artifacts
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+node_modules/
+.DS_Store

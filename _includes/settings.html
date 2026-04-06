@@ -1,0 +1,58 @@
+<div id="settings-popup" class="section">
+    <table class="header" role="presentation">
+        <tr>
+            <td class="header-left"></td>
+            <td class="header-center">
+                <h2>Preferences</h2>
+            </td>
+            <td class="header-right"></td>
+        </tr>
+    </table>
+    <div class="content">
+        <div class="popup-body">
+            <p><label for="scale-slider">Scale:</label>
+                <input type="range" name="scale" id="scale-slider" min="0.5" max="2" value="1" step="0.25"
+                    oninput="changeScale(this.value)">
+                <span id="scale-value">1</span>x
+            </p>
+            <p style="text-align: center;" id="settings-no-local-storage-warning">
+                <i>Your browser doesn't support local storage :[</i>
+            </p>
+        </div>
+    </div>
+</div>
+<div id="settings-button">
+    <button onclick="toggleSettingsPopup()"><img src="/assets/img/settings.gif" alt="Settings icon"></button>
+</div>
+<script>
+    if (typeof (Storage) !== "undefined") {
+        console.warn("Local storage is supported, yay! :D");
+        document.getElementById("settings-no-local-storage-warning").style.display = "none";
+        // check if there's a saved scale value in local storage and apply it
+        const savedScale = localStorage.getItem("pageScale");
+        if (savedScale) {
+            changeScale(savedScale);
+            document.getElementById("scale-slider").value = savedScale;
+        }
+    }
+
+    function changeScale(value) {
+        // change the scale of the page contents
+        document.getElementById("content").style.transform = `scale(${value})`;
+        document.getElementById("scale-value").textContent = value;
+
+        // save the value to local storage
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem("pageScale", value);
+        }
+    }
+
+    function toggleSettingsPopup() {
+        const popup = document.getElementById("settings-popup");
+        popup.classList.toggle("visible");
+    }
+
+    function closeSettingsPopup() {
+        document.getElementById("settings-popup").classList.remove("visible");
+    }
+</script>

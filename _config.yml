@@ -1,0 +1,11 @@
+title: "Paul's website!"
+url: "https://pavlik-dev.github.io"
+baseurl: ""
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - _site
+  - .jekyll-cache
+  - .sass-cache
